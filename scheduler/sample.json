@@ -11,7 +11,7 @@
        "routing_key": "sync_nodes"
      },
      {  "name": "sync_clouds",
-        "interval": "1m",
+        "interval": "1h",
         "routing_key": "sync_clouds"
       }
     ]
