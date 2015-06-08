@@ -52,10 +52,17 @@ type JobsType struct {
 type Sync_nodesType struct {
 	Interval         string
 	Routing_key      string
+<<<<<<< HEAD
 	Command_template Command_templateType
 }
 
 type Command_templateType struct {
+=======
+	Command_template Command_template
+}
+
+type Command_template struct {
+>>>>>>> 697fa299018f9db9e5341aab4bceb78793642bf2
 	Job_name         string
 	When_distributed string
 }
@@ -85,9 +92,13 @@ func main() {
 	if err != nil {
 		log.Fatalf("error: %v", err)
 	}
+<<<<<<< HEAD
 
 	name := config.Exchange.Name()
 	fmt.Printf("Value: %v\n", config)
 	fmt.Printf(name)
+=======
+	fmt.Printf("Value: %v\n", config)
+>>>>>>> 697fa299018f9db9e5341aab4bceb78793642bf2
 
 }
