@@ -1,0 +1,22 @@
+{
+  "broker": "",
+  "exchange": {
+     "name": "scaleworks",
+     "type": "topic",
+     "durable": "true"
+    },
+  "jobs": [
+     { "name": "sync_nodes",
+       "interval": "1m",
+       "routing_key": "job.actions"
+     },
+     {  "name": "sync_clouds",
+        "interval": "3h",
+        "routing_key": "job.actions"
+      },
+     {  "name": "sync_expired",
+        "interval": "24h",
+        "routing_key": "jobs.actions"
+     }
+    ]
+}

@@ -1,10 +1,18 @@
 package main
 
-import "fmt"
-
-var frenceHello string
+import (
+	"github.com/robfig/cron"
+	"log"
+)
 
 func main() {
-	frenceHello = "test"
-	fmt.Println(frenceHello)
+	i := 0
+	c := cron.New()
+	spec := "*/5 * * * * ?"
+	c.AddFunc(spec, func() {
+		i++
+		log.Println("cron running:", i)
+	})
+	c.Start()
+	select {}
 }

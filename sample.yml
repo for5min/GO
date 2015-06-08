@@ -1,0 +1,13 @@
+broker: # default as localhost:port , customization can be added in future releases
+exchange:
+  name: scaleworks
+  type: topic  # default as topic, customization can be added in future releases
+  durable: true # default as true, customization can be added in future releases
+jobs:
+  sync_nodes:
+    interval: 3m
+    routing_key: sync_nodes
+    command_template:  {"job_name": "sync_nodes", "when_distributed": Time.now} 
+  sync_clouds:
+    interval: 1d
+    routing_key: sync_nodes
